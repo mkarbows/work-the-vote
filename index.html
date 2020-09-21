@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <script src="https://d3js.org/d3.v3.min.js"></script>
-    <defs>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="https://unpkg.com/d3-require@0.4.5/build/d3-require.js"></script>
+    <script src="https://unpkg.com/d3-let@0.3.2/build/d3-let.js"></script>
+    <script src="https://unpkg.com/d3-view@0.9.3/build/d3-view.js"></script> -->
+    <!-- <defs>
       <style type="text/css">@import url('mabry-regular.otf');</style>
-    </defs>
+    </defs> -->
     <style type="text/css">
       /* On mouse hover, lighten state color */
       path:hover {
@@ -26,13 +31,29 @@
         border-radius: 8px;
       }
 
-      /* Legend Font Style */
-      body {
-        font: 11px sans-serif;
+      /* modal style */
+      /* .view .done {
+          text-decoration: line-through;
+          color: #b7b7b7;
       }
+      .info {
+          padding: .75rem 2rem;
+      }
+      .todo-container {
+          max-width: 800px;
+      } */
     </style>
   </head>
   <body>
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-primary" d3-on="$modal()">
+                    Launch d3-view modal
+                </button>
+            </div>
+        </div>
+    </div> -->
     <script type="text/javascript">
       /*  This visualization was made possible by modifying code provided by:
       This visualization was built by modifying Michelle Chandra’s Basic US State Map - D3
