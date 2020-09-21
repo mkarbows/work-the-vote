@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <script src="https://d3js.org/d3.v3.min.js"></script>
+    <defs>
+      <style type="text/css">@import url('mabry-regular.otf');</style>
+    </defs>
     <style type="text/css">
       /* On mouse hover, lighten state color */
       path:hover {
@@ -13,14 +16,14 @@
       div.tooltip {
         position: absolute;
         text-align: center;
-        width: 60px;
+        width: 140px;
         height: 28px;
         padding: 2px;
         font: 12px sans-serif;
+        /* font: 12px mabry-regular; */
         background: white;
         border: 0px;
         border-radius: 8px;
-        pointer-events: none;
       }
 
       /* Legend Font Style */
@@ -93,14 +96,13 @@
               return projection([d.lon, d.lat])[1];
             })
             .attr("r", function (d) {
-              return 4;
+              return 16;
             })
-            .style("fill", "rgb(217,91,67)")
-            .style("opacity", 0.85)
-
+            .style("fill", "rgb(240, 177, 62)")
+            .style("opacity", 1.85)
             .on("mouseover", function (d) {
-              div.transition().duration(500).style("opacity", 0);
-              div.transition().duration(200).style("opacity", 0.9);
+              // div.transition().duration(500).style("opacity", 0);
+              div.transition().duration(1000).style("opacity", 0.9);
               div
                 .html(
                   '<a href= "' +
@@ -114,6 +116,12 @@
                 .style("left", d3.event.pageX + "px")
                 .style("top", d3.event.pageY - 28 + "px");
             });
+            // fade out tooltip on mouse out               
+            // .on("mouseout", function(d) {       
+            //     div.transition()        
+            //       .duration(200)      
+            //       .style("opacity", 0);   
+            // });
         });
       });
     </script>
